@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$_rt@9-mv0z_40&hq-2vx)7nfv@7(r-y3o#u89###1to)zb_+q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "ermaa8-djangoblogtest-h2ng79150ih.ws-eu114.gitpod.io",
@@ -91,6 +91,8 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # Password validation
